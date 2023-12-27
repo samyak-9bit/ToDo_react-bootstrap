@@ -1,13 +1,163 @@
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ padding-top: 70px;
+  height: 100vh;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+h1.h1{
+  height: 50px;
+  font-size:  45px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-bottom: 23px;
+  margin: auto;
+  font-weight: bold;
+}
+/* Add form styling */
+.buttonIn{
+  width: 500px;
+  position: relative;
+  padding-bottom: 25px;
+}
+.inputText {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  outline: none;
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(221 221 221);
+  color: black;
+  text-indent: 15px;
+}
+input::placeholder {
+  color: rgb(66, 64, 64);
+}
+.btn.btn {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  outline: none;
+  top: 0;
+  border-radius: 50px;
+  right: 0px;
+  z-index: 2;
+  border: none;
+  top: 2px;
+  height: 55px;
+  width: 25%;
+  cursor: pointer;
+  color: white;
+  background-color: orangered;
+  transform: translateY(-2px);
+}
+.btn.btn:hover{
+  background-color: orangered;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+tr{
+  height: 45px;
 }
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(196, 194, 194);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+/* Style for the checked state of the checkbox */
+input[type="checkbox"]:checked {
+  background-color:   orangered;
+}
+/* Style for the default checkmark */
+input[type="checkbox"]:checked::before {
+  content: '\2713'; 
+  font-size: 14px; 
+  color: #fff;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.task-text{
+  min-width: 400px;
+}
+.task-icon{
+  min-width: 30px;
+  text-align: center;
+}
+.task-icon:hover {
+  background-color: #E0E0E0;
+  cursor: pointer;
+  box-shadow: 0 0 2px black;
+  border: 1px solid black;
+}
+/* tooltip styling */
+.tooltip {
+  position: relative;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 110px;
+  background-color:rgb(221 221 221);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(221 221 221) transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+h3{
+  color: orangered;
+}
+/* Task text classes */
+.strikeText{
+  text-decoration: line-through;
+  color: #888;
+  min-width: 400px;
+  font-family: sans-serif;
+  padding-left: 5px;
+  padding-bottom: 6px;
+
+}
+.plainText{
+  text-decoration: none;
+  color: black;
+  min-width: 400px;
+  font-family: sans-serif;
+  padding-left: 5px;
+  padding-bottom: 6px;
+}
+.deleteIcon:focus{
+ box-shadow: none;
+}
+.deleteIcon:active{
+  box-shadow: none;
+ }
