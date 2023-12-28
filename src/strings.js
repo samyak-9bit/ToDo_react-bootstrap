@@ -4,3 +4,6 @@ export const emptyTaskMessage = "Cannot add an empty Task!!!";
 export const editButton = "Edit";
 export const removeButton = "Remove";
 export const taskAddedMessage = "Task added Successfully!!!";
+export const editTaskHeading = "You can Edit your task Here";
+export const closeButton = "Close";
+export const saveEditButton = "Save Changes";

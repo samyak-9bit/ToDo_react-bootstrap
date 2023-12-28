@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { InputGroup, Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Task } from '../interfaces/task';
+import { closeButton, editTaskHeading, saveEditButton } from '../strings';
 
 interface ModalComponentProps {
   show: boolean;
@@ -40,8 +41,8 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, onHide, task, lis
         onHide={onHide}  
       >
         <Modal.Header>
-          <Modal.Title id="contained-modal-title-vcenter">
-           You can Edit your task Here
+          <Modal.Title id="contained-modal-title-vcenter" style={{margin:"auto"}}>
+           {editTaskHeading}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -54,8 +55,8 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, onHide, task, lis
          </InputGroup>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={editTask}>Save Changes</button>
-          <button onClick={onHide}>Close</button>
+          <button onClick={editTask}>{saveEditButton}</button>
+          <button onClick={onHide}>{closeButton}</button>
         </Modal.Footer>
       </Modal>
     </div>
