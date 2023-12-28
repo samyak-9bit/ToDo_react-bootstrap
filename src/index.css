@@ -35,7 +35,7 @@ h1.h1{
 input::placeholder {
   color: rgb(66, 64, 64);
 }
-.btn.btn {
+.add-btn.btn {
   margin: 0px;
   padding: 0px;
   position: absolute;
@@ -53,7 +53,7 @@ input::placeholder {
   background-color: orangered;
   transform: translateY(-2px);
 }
-.btn.btn:hover{
+.add-btn.btn:hover{
   background-color: orangered;
 
 }
@@ -161,3 +161,11 @@ h3{
 .deleteIcon:active{
   box-shadow: none;
  }
+.edit-btn.btn{
+  background-color: orangered;
+  border: 0;
+}
+.edit-btn.btn:hover{
+  background-color: orangered;
+  border: 0;
+}

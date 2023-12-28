@@ -50,7 +50,7 @@ const AddTask: React.FC<AddTaskProps> = ({ list, setList }) => {
         <Button
           variant="outline-secondary"
           id="button-addon2"
-          className="btn"
+          className="add-btn"
           onClick={handleAddTask}
         >
           {addTask}

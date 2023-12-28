@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InputGroup, Modal } from 'react-bootstrap';
+import { Button, InputGroup, Modal } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Task } from '../interfaces/task';
 import { closeButton, editTaskHeading, saveEditButton } from '../strings';
@@ -39,6 +39,10 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, onHide, task, lis
         aria-labelledby="contained-modal-title-vcenter"
         centered
         onHide={onHide}  
+        onKeyDown={(e:React.KeyboardEvent<HTMLInputElement>) => {
+          if (e.key === "Enter")
+              editTask();
+          }}
       >
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter" style={{margin:"auto"}}>
@@ -55,8 +59,8 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, onHide, task, lis
          </InputGroup>
         </Modal.Body>
         <Modal.Footer>
-          <button onClick={editTask}>{saveEditButton}</button>
-          <button onClick={onHide}>{closeButton}</button>
+          <Button className='edit-btn' onClick={editTask}>{saveEditButton}</Button>
+          <Button variant="secondary" onClick={onHide}>{closeButton}</Button>
         </Modal.Footer>
       </Modal>
     </div>
