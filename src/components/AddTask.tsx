@@ -39,7 +39,10 @@ const AddTask: React.FC<AddTaskProps> = ({ list, setList }) => {
   };
 
   return (
-    <div>
+    <div  onKeyDown={(e:React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "Enter")
+      handleAddTask();
+      }}>
       <div className='buttonIn'>
       <input className="inputText"
           id="task"
